@@ -1,0 +1,308 @@
+2026-04-18 15:00:38 | INFO     | backend.main | main.py:26 | 应用启动，开始初始化 Agent...
+2026-04-18 15:00:39 | INFO     | agent_manager | agent_manager.py:71 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:00:42 | WARNING  | agent_manager | agent_manager.py:79 | MCP 工具初始化失败：unhandled errors in a TaskGroup (1 sub-exception)，将使用无工具模式
+2026-04-18 15:00:42 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:00:46 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-04-18 15:00:46 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:00:46 | INFO     | agent_manager | agent_manager.py:94 | MultiAgentGraph 实例创建完成
+2026-04-18 15:00:46 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-04-18 15:00:46 | INFO     | backend.main | main.py:30 | Agent 初始化成功，服务就绪
+2026-04-18 15:01:41 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=58412)
+2026-04-18 15:01:41 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:01:41 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=64565)
+2026-04-18 15:01:44 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=50060)
+2026-04-18 15:03:07 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:03:07 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:03:07 | INFO     | backend.agents.coordinator | coordinator.py:358 | [LangGraph] 开始处理请求: 帮我规划北京到苏州三日游...
+2026-04-18 15:03:07 | INFO     | backend.agents.coordinator | coordinator.py:82 | [LangGraph] Node: search_node
+2026-04-18 15:03:07 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 帮我规划北京到苏州三日游...
+2026-04-18 15:03:37 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-04-18 15:03:37 | INFO     | backend.rag.vector_store | vector_store.py:174 | 当前向量后端: chroma
+2026-04-18 15:03:37 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-04-18 15:03:37 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-04-18 15:03:37 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-04-18 15:03:38 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:03:38 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-04-18 15:03:38 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-04-18 15:03:38 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-04-18 15:03:38 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:03:38 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-04-18 15:03:39 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:03:39 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:03:39 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:03:39 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=帮我规划北京到苏州三日游..., rewrite=2, candidates=5, results=5
+2026-04-18 15:03:39 | INFO     | backend.agents.coordinator | coordinator.py:103 | [LangGraph] Node: planner_node
+2026-04-18 15:03:39 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 帮我规划北京到苏州三日游...
+2026-04-18 15:04:28 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-04-18 15:04:28 | INFO     | backend.agents.coordinator | coordinator.py:126 | [LangGraph] Node: writer_node
+2026-04-18 15:04:28 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-04-18 15:05:10 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-04-18 15:05:10 | INFO     | backend.agents.coordinator | coordinator.py:161 | [LangGraph] Node: visualize_node
+2026-04-18 15:05:10 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-04-18 15:05:56 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-04-18 15:06:18 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:06:18 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:06:18 | INFO     | backend.main | main.py:34 | 应用关闭，清理资源...
+2026-04-18 15:21:16 | INFO     | backend.main | main.py:26 | 应用启动，开始初始化 Agent...
+2026-04-18 15:21:16 | INFO     | agent_manager | agent_manager.py:71 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:21:17 | WARNING  | agent_manager | agent_manager.py:79 | MCP 工具初始化失败：unhandled errors in a TaskGroup (1 sub-exception)，将使用无工具模式
+2026-04-18 15:21:17 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:21:22 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-04-18 15:21:22 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:21:22 | INFO     | agent_manager | agent_manager.py:94 | MultiAgentGraph 实例创建完成
+2026-04-18 15:21:22 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-04-18 15:21:22 | INFO     | backend.main | main.py:30 | Agent 初始化成功，服务就绪
+2026-04-18 15:21:22 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=65527)
+2026-04-18 15:21:24 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=58277)
+2026-04-18 15:21:24 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:21:24 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=51451)
+2026-04-18 15:21:25 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=52989)
+2026-04-18 15:21:27 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:21:27 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:21:27 | INFO     | backend.agents.coordinator | coordinator.py:358 | [LangGraph] 开始处理请求: 出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:21:27 | INFO     | backend.agents.coordinator | coordinator.py:82 | [LangGraph] Node: search_node
+2026-04-18 15:21:27 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:21:27 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=51570)
+2026-04-18 15:21:48 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-04-18 15:21:48 | INFO     | backend.rag.vector_store | vector_store.py:174 | 当前向量后端: chroma
+2026-04-18 15:21:48 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-04-18 15:21:48 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-04-18 15:21:48 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-04-18 15:21:49 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:21:49 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-04-18 15:21:49 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-04-18 15:21:49 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-04-18 15:21:49 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:21:49 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-04-18 15:21:50 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:21:50 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:21:50 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:21:50 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=出发，预算3000，想去苏州玩3天，亲子..., rewrite=2, candidates=6, results=5
+2026-04-18 15:21:50 | INFO     | backend.agents.coordinator | coordinator.py:103 | [LangGraph] Node: planner_node
+2026-04-18 15:21:50 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:21:52 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:21:52 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:21:52 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:21:52 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:22:26 | INFO     | backend.main | main.py:26 | 应用启动，开始初始化 Agent...
+2026-04-18 15:22:26 | INFO     | agent_manager | agent_manager.py:71 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:22:27 | WARNING  | agent_manager | agent_manager.py:79 | MCP 工具初始化失败：unhandled errors in a TaskGroup (1 sub-exception)，将使用无工具模式
+2026-04-18 15:22:27 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:22:31 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-04-18 15:22:31 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:22:31 | INFO     | agent_manager | agent_manager.py:94 | MultiAgentGraph 实例创建完成
+2026-04-18 15:22:31 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-04-18 15:22:31 | INFO     | backend.main | main.py:30 | Agent 初始化成功，服务就绪
+2026-04-18 15:22:31 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=58282)
+2026-04-18 15:22:32 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=61326)
+2026-04-18 15:22:34 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=55262)
+2026-04-18 15:22:36 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=56159)
+2026-04-18 15:22:36 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:22:36 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=63016)
+2026-04-18 15:22:39 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=52738)
+2026-04-18 15:22:54 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:22:54 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:22:54 | INFO     | backend.agents.coordinator | coordinator.py:358 | [LangGraph] 开始处理请求: 我从北京出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:22:54 | INFO     | backend.agents.coordinator | coordinator.py:82 | [LangGraph] Node: search_node
+2026-04-18 15:22:54 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 我从北京出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:23:27 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-04-18 15:23:27 | INFO     | backend.rag.vector_store | vector_store.py:174 | 当前向量后端: chroma
+2026-04-18 15:23:27 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-04-18 15:23:27 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-04-18 15:23:27 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-04-18 15:23:28 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:23:28 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-04-18 15:23:28 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-04-18 15:23:28 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-04-18 15:23:28 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:23:28 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-04-18 15:23:29 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:23:29 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:23:29 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:23:29 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=我从北京出发，预算3000，想去苏州玩3..., rewrite=2, candidates=6, results=5
+2026-04-18 15:23:29 | INFO     | backend.agents.coordinator | coordinator.py:103 | [LangGraph] Node: planner_node
+2026-04-18 15:23:29 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 我从北京出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:24:11 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-04-18 15:24:11 | INFO     | backend.agents.coordinator | coordinator.py:126 | [LangGraph] Node: writer_node
+2026-04-18 15:24:11 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-04-18 15:24:45 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-04-18 15:24:45 | INFO     | backend.agents.coordinator | coordinator.py:161 | [LangGraph] Node: visualize_node
+2026-04-18 15:24:45 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-04-18 15:25:40 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-04-18 15:26:53 | INFO     | backend.agents.coordinator | coordinator.py:358 | [LangGraph] 开始处理请求: 帮我再规划一个五天的方案...
+2026-04-18 15:26:53 | INFO     | backend.agents.coordinator | coordinator.py:82 | [LangGraph] Node: search_node
+2026-04-18 15:26:53 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 帮我再规划一个五天的方案...
+2026-04-18 15:27:10 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 1 条结果
+2026-04-18 15:27:10 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-04-18 15:27:10 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-04-18 15:27:10 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-04-18 15:27:10 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:27:10 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 1 条结果添加到知识库
+2026-04-18 15:27:10 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:27:10 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:27:10 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=帮我再规划一个五天的方案..., rewrite=1, candidates=6, results=5
+2026-04-18 15:27:10 | INFO     | backend.agents.coordinator | coordinator.py:103 | [LangGraph] Node: planner_node
+2026-04-18 15:27:10 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 帮我再规划一个五天的方案...
+2026-04-18 15:28:03 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 5
+2026-04-18 15:28:03 | INFO     | backend.agents.coordinator | coordinator.py:126 | [LangGraph] Node: writer_node
+2026-04-18 15:28:03 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-04-18 15:28:42 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 5 天攻略
+2026-04-18 15:28:42 | INFO     | backend.agents.coordinator | coordinator.py:161 | [LangGraph] Node: visualize_node
+2026-04-18 15:28:42 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-04-18 15:29:33 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-04-18 15:31:54 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:31:54 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:31:54 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:31:54 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:31:54 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:31:54 | INFO     | backend.main | main.py:34 | 应用关闭，清理资源...
+2026-04-18 15:36:29 | INFO     | backend.main | main.py:26 | 应用启动，开始初始化 Agent...
+2026-04-18 15:36:29 | INFO     | agent_manager | agent_manager.py:71 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:36:30 | WARNING  | agent_manager | agent_manager.py:79 | MCP 工具初始化失败：unhandled errors in a TaskGroup (1 sub-exception)，将使用无工具模式
+2026-04-18 15:36:30 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:36:34 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-04-18 15:36:34 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:36:34 | INFO     | agent_manager | agent_manager.py:94 | MultiAgentGraph 实例创建完成
+2026-04-18 15:36:34 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-04-18 15:36:34 | INFO     | backend.main | main.py:30 | Agent 初始化成功，服务就绪
+2026-04-18 15:36:34 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=56474)
+2026-04-18 15:36:37 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:36:39 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=56931)
+2026-04-18 15:36:39 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=52293)
+2026-04-18 15:36:40 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=63541)
+2026-04-18 15:36:41 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=65184)
+2026-04-18 15:36:41 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:36:41 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=65030)
+2026-04-18 15:36:43 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:36:44 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:36:44 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:36:44 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=53373)
+2026-04-18 15:36:47 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:36:47 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:36:47 | INFO     | backend.agents.coordinator | coordinator.py:358 | [LangGraph] 开始处理请求: 我从北京出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:36:47 | INFO     | backend.agents.coordinator | coordinator.py:82 | [LangGraph] Node: search_node
+2026-04-18 15:36:47 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 我从北京出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:37:15 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-04-18 15:37:15 | INFO     | backend.rag.vector_store | vector_store.py:174 | 当前向量后端: chroma
+2026-04-18 15:37:15 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-04-18 15:37:15 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-04-18 15:37:15 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-04-18 15:37:15 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:37:15 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-04-18 15:37:15 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-04-18 15:37:15 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-04-18 15:37:16 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:37:16 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-04-18 15:37:16 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:37:16 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:37:17 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:37:17 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=我从北京出发，预算3000，想去苏州玩3..., rewrite=2, candidates=6, results=5
+2026-04-18 15:37:17 | INFO     | backend.agents.coordinator | coordinator.py:103 | [LangGraph] Node: planner_node
+2026-04-18 15:37:17 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 我从北京出发，预算3000，想去苏州玩3天，亲子出行，住地铁附近，不吃辣...
+2026-04-18 15:38:07 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-04-18 15:38:07 | INFO     | backend.agents.coordinator | coordinator.py:126 | [LangGraph] Node: writer_node
+2026-04-18 15:38:07 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-04-18 15:38:55 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-04-18 15:38:55 | INFO     | backend.agents.coordinator | coordinator.py:161 | [LangGraph] Node: visualize_node
+2026-04-18 15:38:55 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-04-18 15:39:38 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-04-18 15:46:10 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:46:10 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=63588)
+2026-04-18 15:46:11 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=59939)
+2026-04-18 15:47:58 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:47:58 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:47:58 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:47:58 | INFO     | backend.main | main.py:34 | 应用关闭，清理资源...
+2026-04-18 15:48:01 | INFO     | backend.main | main.py:26 | 应用启动，开始初始化 Agent...
+2026-04-18 15:48:01 | INFO     | agent_manager | agent_manager.py:71 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:48:02 | WARNING  | agent_manager | agent_manager.py:79 | MCP 工具初始化失败：unhandled errors in a TaskGroup (1 sub-exception)，将使用无工具模式
+2026-04-18 15:48:02 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:48:06 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-04-18 15:48:06 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:48:06 | INFO     | agent_manager | agent_manager.py:94 | MultiAgentGraph 实例创建完成
+2026-04-18 15:48:06 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-04-18 15:48:06 | INFO     | backend.main | main.py:30 | Agent 初始化成功，服务就绪
+2026-04-18 15:48:08 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=61279)
+2026-04-18 15:48:08 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:48:10 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=59639)
+2026-04-18 15:48:10 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:48:10 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=51202)
+2026-04-18 15:48:10 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=53155)
+2026-04-18 15:48:10 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:48:13 | INFO     | backend.main | main.py:85 | WebSocket 连接建立：Address(host='127.0.0.1', port=52518)
+2026-04-18 15:48:45 | INFO     | backend.rag.vector_store | vector_store.py:174 | 当前向量后端: chroma
+2026-04-18 15:48:47 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:48:47 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:48:48 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:48:48 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=我从北京出发，预算3000，想去苏州玩3..., rewrite=2, candidates=6, results=3
+2026-04-18 15:48:48 | INFO     | backend.agents.coordinator | coordinator.py:68 | 初始化 LangGraph Multi-Agent...
+2026-04-18 15:48:48 | INFO     | backend.agents.coordinator | coordinator.py:78 | 所有 Agent 初始化完成
+2026-04-18 15:48:48 | INFO     | backend.agents.coordinator | coordinator.py:358 | [LangGraph] 开始处理请求: ## 系统与上下文
+你是一位专业的旅行规划助手，名为 TravelBot。你擅长为用户制定详细、实用...
+2026-04-18 15:48:48 | INFO     | backend.agents.coordinator | coordinator.py:82 | [LangGraph] Node: search_node
+2026-04-18 15:48:48 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: ## 系统与上下文
+你是一位专业的旅行规划助手，名为 TravelBot。你擅长为用户制定详细、实用...
+2026-04-18 15:49:06 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-04-18 15:49:06 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-04-18 15:49:06 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-04-18 15:49:06 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-04-18 15:49:07 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:49:07 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-04-18 15:49:07 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-04-18 15:49:07 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-04-18 15:49:08 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:49:08 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-04-18 15:49:08 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:49:08 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:49:09 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:49:09 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=## 系统与上下文
+你是一位专业的旅行规..., rewrite=2, candidates=6, results=5
+2026-04-18 15:49:09 | INFO     | backend.agents.coordinator | coordinator.py:103 | [LangGraph] Node: planner_node
+2026-04-18 15:49:09 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: ## 系统与上下文
+你是一位专业的旅行规划助手，名为 TravelBot。你擅长为用户制定详细、实用...
+2026-04-18 15:49:16 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 0
+2026-04-18 15:49:16 | INFO     | backend.agents.coordinator | coordinator.py:126 | [LangGraph] Node: writer_node
+2026-04-18 15:49:16 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-04-18 15:50:09 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 0 天攻略
+2026-04-18 15:50:09 | INFO     | backend.agents.coordinator | coordinator.py:161 | [LangGraph] Node: visualize_node
+2026-04-18 15:50:09 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-04-18 15:50:55 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-04-18 15:52:43 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:52:43 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=帮我再规划一个五天的方案..., rewrite=1, candidates=6, results=3
+2026-04-18 15:52:43 | INFO     | backend.agents.coordinator | coordinator.py:358 | [LangGraph] 开始处理请求: ## 系统与上下文
+你是一位专业的旅行规划助手，名为 TravelBot。你擅长为用户制定详细、实用...
+2026-04-18 15:52:43 | INFO     | backend.agents.coordinator | coordinator.py:82 | [LangGraph] Node: search_node
+2026-04-18 15:52:43 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: ## 系统与上下文
+你是一位专业的旅行规划助手，名为 TravelBot。你擅长为用户制定详细、实用...
+2026-04-18 15:53:14 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-04-18 15:53:14 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-04-18 15:53:14 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-04-18 15:53:14 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-04-18 15:53:14 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:53:14 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-04-18 15:53:14 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-04-18 15:53:14 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-04-18 15:53:15 | INFO     | backend.rag.vector_store | vector_store.py:62 | 成功添加 1 个文档到 ChromaDB
+2026-04-18 15:53:15 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-04-18 15:53:16 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:53:16 | INFO     | backend.rag.keyword_retriever | keyword_retriever.py:163 | 关键词索引构建完成: files=6, chunks=6, avg_len=128.00
+2026-04-18 15:53:16 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-04-18 15:53:16 | INFO     | backend.rag.retriever | retriever.py:152 | 增强检索完成: query=## 系统与上下文
+你是一位专业的旅行规..., rewrite=2, candidates=6, results=5
+2026-04-18 15:53:16 | INFO     | backend.agents.coordinator | coordinator.py:103 | [LangGraph] Node: planner_node
+2026-04-18 15:53:16 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: ## 系统与上下文
+你是一位专业的旅行规划助手，名为 TravelBot。你擅长为用户制定详细、实用...
+2026-04-18 15:54:37 | WARNING  | backend.agents.planner_agent | planner_agent.py:204 | 解析旅行计划失败: 1 validation error for DayPlan
+spots.1.ticket_price
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='包含在古镇门票内', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/float_parsing
+2026-04-18 15:54:37 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-04-18 15:54:37 | INFO     | backend.agents.coordinator | coordinator.py:126 | [LangGraph] Node: writer_node
+2026-04-18 15:54:37 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-04-18 15:55:42 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-04-18 15:55:42 | INFO     | backend.agents.coordinator | coordinator.py:161 | [LangGraph] Node: visualize_node
+2026-04-18 15:55:42 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-04-18 15:56:30 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-04-18 15:57:53 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:57:53 | INFO     | backend.main | main.py:95 | 客户端断开连接
+2026-04-18 15:57:53 | INFO     | backend.main | main.py:34 | 应用关闭，清理资源...

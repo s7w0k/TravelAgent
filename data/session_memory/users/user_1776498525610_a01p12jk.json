@@ -1,0 +1,20 @@
+{
+  "user_id": "user_1776498525610_a01p12jk",
+  "departure_city": "北京",
+  "destinations": [
+    "苏州"
+  ],
+  "budget_min": null,
+  "budget_max": 3000,
+  "accommodation_preferences": [
+    "地铁"
+  ],
+  "food_preferences": [],
+  "food_avoidances": [
+    "不吃辣"
+  ],
+  "travel_personas": [
+    "亲子"
+  ],
+  "updated_at": "2026-04-18T15:56:30.422747"
+}

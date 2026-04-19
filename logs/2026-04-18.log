@@ -1,0 +1,365 @@
+2026-04-18 15:00:39 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-04-18 15:00:39 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-04-18 15:00:39 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-04-18 15:00:39 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-04-18 15:00:39 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-04-18 15:00:41 | ERROR    | mcp_tools | mcp_tools.py:61 | MCP 工具管理器初始化失败：unhandled errors in a TaskGroup (1 sub-exception)
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\研究生\1\项目\Travel_Agent-main\src\mcp_tools.py", line 49, in initialize
+  |     self.tools = await self.client.get_tools()
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\client.py", line 197, in get_tools
+  |     tools_list = await asyncio.gather(*load_mcp_tool_tasks)
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 478, in load_mcp_tools
+  |     async with create_session(
+  |                ~~~~~~~~~~~~~~^
+  |         connection, mcp_callbacks=mcp_callbacks
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     ) as tool_session:
+  |     ^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 419, in create_session
+  |     async with _create_stdio_session(**params) as session:
+  |                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 231, in _create_stdio_session
+  |     stdio_client(server_params) as (read, write),
+  |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 232, in _create_stdio_session
+    |     ClientSession(read, write, **(session_kwargs or {})) as session,
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 234, in _create_stdio_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 420, in create_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 481, in load_mcp_tools
+      |     await tool_session.initialize()
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\session.py", line 171, in initialize
+      |     result = await self.send_request(
+      |              ^^^^^^^^^^^^^^^^^^^^^^^^
+      |     ...<16 lines>...
+      |     )
+      |     ^
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 306, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+2026-04-18 15:21:16 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-04-18 15:21:16 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-04-18 15:21:16 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-04-18 15:21:16 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-04-18 15:21:16 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-04-18 15:21:17 | ERROR    | mcp_tools | mcp_tools.py:61 | MCP 工具管理器初始化失败：unhandled errors in a TaskGroup (1 sub-exception)
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\研究生\1\项目\Travel_Agent-main\src\mcp_tools.py", line 49, in initialize
+  |     self.tools = await self.client.get_tools()
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\client.py", line 197, in get_tools
+  |     tools_list = await asyncio.gather(*load_mcp_tool_tasks)
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 478, in load_mcp_tools
+  |     async with create_session(
+  |                ~~~~~~~~~~~~~~^
+  |         connection, mcp_callbacks=mcp_callbacks
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     ) as tool_session:
+  |     ^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 419, in create_session
+  |     async with _create_stdio_session(**params) as session:
+  |                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 231, in _create_stdio_session
+  |     stdio_client(server_params) as (read, write),
+  |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 232, in _create_stdio_session
+    |     ClientSession(read, write, **(session_kwargs or {})) as session,
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 234, in _create_stdio_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 420, in create_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 481, in load_mcp_tools
+      |     await tool_session.initialize()
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\session.py", line 171, in initialize
+      |     result = await self.send_request(
+      |              ^^^^^^^^^^^^^^^^^^^^^^^^
+      |     ...<16 lines>...
+      |     )
+      |     ^
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 306, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+2026-04-18 15:22:26 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-04-18 15:22:26 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-04-18 15:22:26 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-04-18 15:22:26 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-04-18 15:22:26 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-04-18 15:22:27 | ERROR    | mcp_tools | mcp_tools.py:61 | MCP 工具管理器初始化失败：unhandled errors in a TaskGroup (1 sub-exception)
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\研究生\1\项目\Travel_Agent-main\src\mcp_tools.py", line 49, in initialize
+  |     self.tools = await self.client.get_tools()
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\client.py", line 197, in get_tools
+  |     tools_list = await asyncio.gather(*load_mcp_tool_tasks)
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 478, in load_mcp_tools
+  |     async with create_session(
+  |                ~~~~~~~~~~~~~~^
+  |         connection, mcp_callbacks=mcp_callbacks
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     ) as tool_session:
+  |     ^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 419, in create_session
+  |     async with _create_stdio_session(**params) as session:
+  |                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 231, in _create_stdio_session
+  |     stdio_client(server_params) as (read, write),
+  |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 232, in _create_stdio_session
+    |     ClientSession(read, write, **(session_kwargs or {})) as session,
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 234, in _create_stdio_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 420, in create_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 481, in load_mcp_tools
+      |     await tool_session.initialize()
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\session.py", line 171, in initialize
+      |     result = await self.send_request(
+      |              ^^^^^^^^^^^^^^^^^^^^^^^^
+      |     ...<16 lines>...
+      |     )
+      |     ^
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 306, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+2026-04-18 15:36:29 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-04-18 15:36:29 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-04-18 15:36:29 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-04-18 15:36:29 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-04-18 15:36:29 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-04-18 15:36:30 | ERROR    | mcp_tools | mcp_tools.py:61 | MCP 工具管理器初始化失败：unhandled errors in a TaskGroup (1 sub-exception)
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\研究生\1\项目\Travel_Agent-main\src\mcp_tools.py", line 49, in initialize
+  |     self.tools = await self.client.get_tools()
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\client.py", line 197, in get_tools
+  |     tools_list = await asyncio.gather(*load_mcp_tool_tasks)
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 478, in load_mcp_tools
+  |     async with create_session(
+  |                ~~~~~~~~~~~~~~^
+  |         connection, mcp_callbacks=mcp_callbacks
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     ) as tool_session:
+  |     ^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 419, in create_session
+  |     async with _create_stdio_session(**params) as session:
+  |                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 231, in _create_stdio_session
+  |     stdio_client(server_params) as (read, write),
+  |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 232, in _create_stdio_session
+    |     ClientSession(read, write, **(session_kwargs or {})) as session,
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 234, in _create_stdio_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 420, in create_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 481, in load_mcp_tools
+      |     await tool_session.initialize()
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\session.py", line 171, in initialize
+      |     result = await self.send_request(
+      |              ^^^^^^^^^^^^^^^^^^^^^^^^
+      |     ...<16 lines>...
+      |     )
+      |     ^
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 306, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+2026-04-18 15:48:01 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-04-18 15:48:01 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-04-18 15:48:01 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-04-18 15:48:01 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-04-18 15:48:01 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-04-18 15:48:02 | ERROR    | mcp_tools | mcp_tools.py:61 | MCP 工具管理器初始化失败：unhandled errors in a TaskGroup (1 sub-exception)
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\研究生\1\项目\Travel_Agent-main\src\mcp_tools.py", line 49, in initialize
+  |     self.tools = await self.client.get_tools()
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\client.py", line 197, in get_tools
+  |     tools_list = await asyncio.gather(*load_mcp_tool_tasks)
+  |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 478, in load_mcp_tools
+  |     async with create_session(
+  |                ~~~~~~~~~~~~~~^
+  |         connection, mcp_callbacks=mcp_callbacks
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     ) as tool_session:
+  |     ^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 419, in create_session
+  |     async with _create_stdio_session(**params) as session:
+  |                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 231, in _create_stdio_session
+  |     stdio_client(server_params) as (read, write),
+  |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  |   File "D:\python\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 232, in _create_stdio_session
+    |     ClientSession(read, write, **(session_kwargs or {})) as session,
+    |     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 234, in _create_stdio_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\sessions.py", line 420, in create_session
+      |     yield session
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_mcp_adapters\tools.py", line 481, in load_mcp_tools
+      |     await tool_session.initialize()
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\client\session.py", line 171, in initialize
+      |     result = await self.send_request(
+      |              ^^^^^^^^^^^^^^^^^^^^^^^^
+      |     ...<16 lines>...
+      |     )
+      |     ^
+      |   File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\mcp\shared\session.py", line 306, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
